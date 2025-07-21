@@ -77,3 +77,24 @@ CREATE TABLE users (
 );
 ```
 
+6. Aviable scripts
+You can run the following scripts defined in the package.json file:
+
+```bash
+npm run dev      # Run in development mode
+npm run tsc      # Compile the TypeScript code
+npm run lint     # Check code formatting
+npm start        # Run the compiled project
+```
+
+7. TypeScript configuration
+
+```bash
+  "rootDir": "./src",                 // Source files are inside the src/ folder
+  "outDir": "./build",                // Compiled files are output to build/
+  "noUnusedParameters": true,         // Error on unused function parameters
+  "noUnusedLocals": true,             // Error on unused local variables
+  "noImplicitThis": true,             // Error when 'this' has implicit any type
+  "noFallthroughCasesInSwitch": true, // Prevent fallthrough in switch cases
+  "resolveJsonModule": true           // Allows importing .json files as modules
+```
