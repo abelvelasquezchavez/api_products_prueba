@@ -33,7 +33,7 @@ JWT_SECRET=miclavesecreta
 npm run dev
 ```
 
-5. Open your browser and navigate to `http://localhost:3000/api/products`.
+5. Open your post and navigate to `http://localhost:3000/api/products`.
 
 ## Endpoints
 
@@ -48,13 +48,29 @@ This endpoint retrieves a specific product by its ID.
 ### POST /api/products
 
 This endpoint creates a new product in the database.
-
+Required token
+Make sure to include the following data in the request body, for example:
+```
+{
+  "name": "Product name",
+  "description": "Product description",
+  "price": 10.99  // Decimal(10, 2)
+}
+```
 ### PUT /api/products/:id
 
 This endpoint updates a specific product by its ID.
-
+Required token
+Make sure to include the following data in the request body:
+```
+{
+  "name": "Product name",
+  "description": "Product description",
+  "price": 10.99  // Decimal(10, 2)
+}
+```
 ### DELETE /api/products/:id
-
+required token
 This endpoint deletes a specific product by its ID.
 
 ## Database
@@ -77,7 +93,40 @@ CREATE TABLE users (
 );
 ```
 
-6. Aviable scripts
+6. Open your postman and navigate to `http://localhost:3000/api/users`.  
+
+## Endpoints
+
+### POST /api/users/register
+This endpoint registers a new user in the database.
+Make sure to include the following data in the request body:
+```
+{
+  "email": "user@example.com",
+  "password": "password"
+}
+```
+### POST /api/users/login
+This endpoint logs in a user in the database.
+Generates a JWT token.
+Make sure to include the following data in the request body:
+```
+{
+  "email": "user@example.com",
+  "password": "password"
+}
+```
+### POST /api/users/reset-password
+This endpoint registers a new user in the database.
+Make sure to include the following data in the request body:
+```
+{
+  "email": "user@example.com",
+  "newPassword": "newPassword"
+}
+```
+
+7. Aviable scripts
 You can run the following scripts defined in the package.json file:
 
 ```bash
@@ -87,7 +136,7 @@ npm run lint     # Check code formatting
 npm start        # Run the compiled project
 ```
 
-7. TypeScript configuration
+8. TypeScript configuration
 
 ```bash
   "rootDir": "./src",                 // Source files are inside the src/ folder
