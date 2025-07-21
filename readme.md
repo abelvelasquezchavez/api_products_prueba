@@ -7,7 +7,7 @@ To get started, follow these steps:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/Abeljo/api_products_B89_gpt.git
+git clone https://github.com/abelvelasquezchavez/api_products_prueba.git
 ```
 
 2. Install the dependencies:
